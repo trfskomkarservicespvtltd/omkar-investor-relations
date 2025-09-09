@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Investor Relations | Omkar Enterprises</title>
+<meta name="description" content="Investor Relations page of Omkar Enterprises - MOA-compliant, transparent, and secure investment information.">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<header>
+  <nav>
+    <ul>
+      <li><a href="index.html" class="active">Investor Relations</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="compliance.html">Compliance</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Investor Relations</h1>
+  <p>We are committed to transparency, compliance, and disciplined growth for our investors.</p>
+  <a href="#portal" class="cta">Investor Portal Login</a>
+  <a href="#contact" class="cta">Contact Us</a>
+  <p class="disclaimer">All activities are conducted within the objects of the company’s MOA and the Companies Act, 2013. Past performance is not indicative of future returns.</p>
+</section>
+
+<section class="performance">
+  <h2>Aggregate Past Performance</h2>
+  <p>Over the past 2 years, our investors have benefited from structured growth strategies. Below is the anonymized, aggregate performance of our investor base.</p>
+  <canvas id="performanceChart" width="600" height="300"></canvas>
+  <p class="chart-disclaimer">This data is aggregated and anonymized. Individual investor returns may vary. Past performance is not a guarantee of future returns.</p>
+</section>
+
+<script>
+const ctx = document.getElementById('performanceChart').getContext('2d');
+const performanceChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['2023', '2024', '2025 (YTD)'],
+        datasets: [{
+            label: 'Average Annualized Return (%)',
+            data: [12, 14, 13.5],
+            backgroundColor: 'rgba(0, 123, 255, 0.6)',
+            borderColor: 'rgba(0, 123, 255, 1)',
+            borderWidth: 1
+        }]
+    },
+    options: {
+        responsive: true,
+        scales: {
+            y: {
+                beginAtZero: true,
+                max: 20
+            }
+        }
+    }
+});
+</script>
+
+<section id="portal" class="portal">
+  <h2>Private Investor Portal</h2>
+  <p>Our secure portal provides registered investors with access to:</p>
+  <ul>
+    <li>Personalized investment reports</li>
+    <li>Quarterly and annual performance statements</li>
+    <li>TDS and compliance certificates</li>
+    <li>Historical investment milestones</li>
+  </ul>
+  <a href="#" class="cta">Login to Investor Portal</a>
+  <p class="disclaimer">Restricted to verified investors only. Sharing of login credentials is strictly prohibited. All information is confidential and MOA-compliant.</p>
+</section>
+
+<section class="risk">
+  <h2>Risk Disclaimer</h2>
+  <p>Investments involve risk. Past performance is not indicative of future returns. Returns are subject to market conditions and the company’s risk management policy.</p>
+</section>
+
+<section class="resources">
+  <h2>Downloadable Resources</h2>
+  <ul>
+    <li>Quarterly Reports (aggregate)</li>
+    <li>Company MOA Summary</li>
+    <li>Investment Policy Document</li>
+  </ul>
+  <p>Available for verified investors via the portal.</p>
+</section>
+
+<section class="faq">
+  <h2>Frequently Asked Questions</h2>
+  <dl>
+    <dt>How are returns calculated?</dt>
+    <dd>Returns are calculated based on the company’s structured investment policies and risk-adjusted strategies.</dd>
+    <dt>Can I withdraw early?</dt>
+    <dd>Withdrawal terms are defined in your investment agreement. Please contact the investor relations team.</dd>
+    <dt>How is my investment protected?</dt>
+    <dd>Investments are managed under MOA-approved objects, with full compliance and internal risk management policies.</dd>
+  </dl>
+</section>
+
+<section class="timeline">
+  <h2>Company Growth Timeline</h2>
+  <p>Foundation → Expansion → Institutional Scaling → Large Scale</p>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Contact Investor Relations</h2>
+  <form action="https://formspree.io/f/{your-id}" method="POST">
+    <label>Name: <input type="text" name="name" required></label>
+    <label>Email: <input type="email" name="email" required></label>
+    <label>Phone: <input type="tel" name="phone"></label>
+    <label>Message: <textarea name="message" required></textarea></label>
+    <button type="submit">Submit</button>
+  </form>
+  <p class="disclaimer">Responses are provided in accordance with legal and MOA-compliant guidelines. Past returns are informational only and do not imply guarantees.</p>
+</section>
+
+<footer>
+  <p>TRFSK Omkar Services Pvt Ltd | All activities conducted in compliance with MOA & Companies Act, 2013</p>
+  <p>&copy; 2025 Omkar Enterprises | <a href="#">LinkedIn</a> | <a href="#">YouTube</a> | <a href="#">WhatsApp</a></p>
+</footer>
+
+</body>
+</html>
