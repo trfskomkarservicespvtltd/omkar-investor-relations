@@ -5,38 +5,49 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Investor Relations | Omkar Enterprises</title>
 <meta name="description" content="Investor Relations page of Omkar Enterprises - MOA-compliant, transparent, and secure investment information.">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 
+<!-- Navbar -->
 <header>
-  <nav>
-    <ul>
-      <li><a href="index.html" class="active">Investor Relations</a></li>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="compliance.html">Compliance</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="contact.html">Contact</a></li>
+  <nav class="navbar">
+    <div class="logo">Omkar Enterprises</div>
+    <ul class="nav-links">
+      <li><a href="#" class="active">Investor Relations</a></li>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Compliance</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Contact</a></li>
     </ul>
   </nav>
 </header>
 
+<!-- Hero Section -->
 <section class="hero">
-  <h1>Investor Relations</h1>
-  <p>We are committed to transparency, compliance, and disciplined growth for our investors.</p>
-  <a href="#portal" class="cta">Investor Portal Login</a>
-  <a href="#contact" class="cta">Contact Us</a>
-  <p class="disclaimer">All activities are conducted within the objects of the company’s MOA and the Companies Act, 2013. Past performance is not indicative of future returns.</p>
+  <div class="hero-content">
+    <h1>Investor Relations</h1>
+    <p>Transparency, compliance, and disciplined growth for our investors.</p>
+    <div class="hero-cta">
+      <a href="#portal" class="btn">Investor Portal Login</a>
+      <a href="#contact" class="btn btn-secondary">Contact Us</a>
+    </div>
+    <p class="disclaimer">All activities are conducted within the objects of the company’s MOA and the Companies Act, 2013. Past performance is not indicative of future returns.</p>
+  </div>
 </section>
 
+<!-- Aggregate Performance Section -->
 <section class="performance">
   <h2>Aggregate Past Performance</h2>
-  <p>Over the past 2 years, our investors have benefited from structured growth strategies. Below is the anonymized, aggregate performance of our investor base.</p>
-  <canvas id="performanceChart" width="600" height="300"></canvas>
-  <p class="chart-disclaimer">This data is aggregated and anonymized. Individual investor returns may vary. Past performance is not a guarantee of future returns.</p>
+  <p>Anonymized aggregated data of investor returns over the last 3 years.</p>
+  <div class="chart-card">
+    <canvas id="performanceChart"></canvas>
+  </div>
+  <p class="chart-disclaimer">Data is aggregated and anonymized. Past performance is not a guarantee of future returns.</p>
 </section>
 
 <script>
@@ -48,80 +59,100 @@ const performanceChart = new Chart(ctx, {
         datasets: [{
             label: 'Average Annualized Return (%)',
             data: [12, 14, 13.5],
-            backgroundColor: 'rgba(0, 123, 255, 0.6)',
+            backgroundColor: 'rgba(0, 123, 255, 0.7)',
             borderColor: 'rgba(0, 123, 255, 1)',
-            borderWidth: 1
+            borderWidth: 1,
+            borderRadius: 5
         }]
     },
     options: {
         responsive: true,
+        plugins: {
+            tooltip: {enabled: true}
+        },
         scales: {
-            y: {
-                beginAtZero: true,
-                max: 20
-            }
+            y: {beginAtZero:true, max:20}
         }
     }
 });
 </script>
 
+<!-- Private Portal Section -->
 <section id="portal" class="portal">
   <h2>Private Investor Portal</h2>
-  <p>Our secure portal provides registered investors with access to:</p>
-  <ul>
-    <li>Personalized investment reports</li>
-    <li>Quarterly and annual performance statements</li>
-    <li>TDS and compliance certificates</li>
-    <li>Historical investment milestones</li>
-  </ul>
-  <a href="#" class="cta">Login to Investor Portal</a>
-  <p class="disclaimer">Restricted to verified investors only. Sharing of login credentials is strictly prohibited. All information is confidential and MOA-compliant.</p>
+  <p>Access secure, MOA-compliant investor resources:</p>
+  <div class="portal-cards">
+    <div class="card">
+      <h3>Reports</h3>
+      <p>Personalized quarterly & annual performance statements.</p>
+    </div>
+    <div class="card">
+      <h3>Compliance</h3>
+      <p>TDS certificates and MOA-aligned investment documents.</p>
+    </div>
+    <div class="card">
+      <h3>Milestones</h3>
+      <p>Historical investment achievements and portfolio summary.</p>
+    </div>
+  </div>
+  <a href="#" class="btn">Login to Investor Portal</a>
+  <p class="disclaimer">Restricted to verified investors only. Sharing of login credentials is strictly prohibited.</p>
 </section>
 
+<!-- Risk Disclaimer Section -->
 <section class="risk">
   <h2>Risk Disclaimer</h2>
-  <p>Investments involve risk. Past performance is not indicative of future returns. Returns are subject to market conditions and the company’s risk management policy.</p>
+  <p>Investments involve risk. Past performance is not indicative of future returns. All investment decisions are made according to MOA-approved objects and internal risk policies.</p>
 </section>
 
+<!-- Downloadable Resources Section -->
 <section class="resources">
   <h2>Downloadable Resources</h2>
   <ul>
-    <li>Quarterly Reports (aggregate)</li>
+    <li>Quarterly Reports (Aggregate)</li>
     <li>Company MOA Summary</li>
     <li>Investment Policy Document</li>
   </ul>
-  <p>Available for verified investors via the portal.</p>
+  <p>Available for verified investors via portal login.</p>
 </section>
 
+<!-- FAQ Section -->
 <section class="faq">
   <h2>Frequently Asked Questions</h2>
-  <dl>
-    <dt>How are returns calculated?</dt>
-    <dd>Returns are calculated based on the company’s structured investment policies and risk-adjusted strategies.</dd>
-    <dt>Can I withdraw early?</dt>
-    <dd>Withdrawal terms are defined in your investment agreement. Please contact the investor relations team.</dd>
-    <dt>How is my investment protected?</dt>
-    <dd>Investments are managed under MOA-approved objects, with full compliance and internal risk management policies.</dd>
-  </dl>
+  <div class="faq-card">
+    <h3>How are returns calculated?</h3>
+    <p>Returns are based on structured investment policies and risk-adjusted strategies.</p>
+  </div>
+  <div class="faq-card">
+    <h3>Can I withdraw early?</h3>
+    <p>Withdrawal terms are defined in the investment agreement. Contact Investor Relations for guidance.</p>
+  </div>
+  <div class="faq-card">
+    <h3>How is my investment protected?</h3>
+    <p>Investments are managed under MOA-approved objects, full compliance, and internal risk management policies.</p>
+  </div>
 </section>
 
+<!-- Growth Timeline Section -->
 <section class="timeline">
   <h2>Company Growth Timeline</h2>
   <p>Foundation → Expansion → Institutional Scaling → Large Scale</p>
 </section>
 
+<!-- Contact Section -->
 <section id="contact" class="contact">
   <h2>Contact Investor Relations</h2>
-  <form action="https://formspree.io/f/{your-id}" method="POST">
+  <form action="https://formspree.io/f/{your-id}" method="POST" class="contact-form">
     <label>Name: <input type="text" name="name" required></label>
     <label>Email: <input type="email" name="email" required></label>
     <label>Phone: <input type="tel" name="phone"></label>
     <label>Message: <textarea name="message" required></textarea></label>
     <button type="submit">Submit</button>
   </form>
-  <p class="disclaimer">Responses are provided in accordance with legal and MOA-compliant guidelines. Past returns are informational only and do not imply guarantees.</p>
+  <p class="disclaimer">Responses are provided in accordance with legal and MOA-compliant guidelines. Past returns are informational only.</p>
 </section>
 
+<!-- Footer -->
 <footer>
   <p>TRFSK Omkar Services Pvt Ltd | All activities conducted in compliance with MOA & Companies Act, 2013</p>
   <p>&copy; 2025 Omkar Enterprises | <a href="#">LinkedIn</a> | <a href="#">YouTube</a> | <a href="#">WhatsApp</a></p>
