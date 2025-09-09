@@ -1,1 +1,19 @@
 
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #f8f9fa;
+  color: #333;
+}
+
+h1,h2,h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: #002147;
+}
+
+.section-card {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  padding: 20px;
+  background: #fff;
+  margin-bottom: 30px;
+}
