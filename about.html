@@ -3,29 +3,94 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Omkar Enterprises</title>
+  <title>About Us | Omkar Enterprises</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/script.js" defer></script>
 </head>
 <body>
-  <header>
-    <img src="images/logo.png" alt="Omkar Enterprises Logo" width="150">
-    <nav>
-      <a href="index.html">Home</a> |
-      <a href="about.html">About</a> |
-      <a href="services.html">Services</a> |
-      <a href="investors.html">Investors</a> |
-      <a href="compliance.html">Compliance</a> |
-      <a href="blog.html">Blog</a> |
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
-  <main>
-    <h1>Welcome to Omkar Enterprises</h1>
-    <p>This is a placeholder for the About page.</p>
-  </main>
-  <footer>
-    <p>&copy; 2025 Omkar Enterprises</p>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/logo.png" alt="Logo" width="40" class="me-2"> Omkar Enterprises
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="investors.html">Investor Relations</a></li>
+          <li class="nav-item"><a class="nav-link" href="compliance.html">Compliance</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero text-center">
+    <div class="container">
+      <h1>About Us</h1>
+      <p>Our journey, mission, and commitment to transparency & compliance.</p>
+    </div>
+  </section>
+
+  <!-- Company Story -->
+  <section class="container my-5">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <img src="images/about.jpg" class="img-fluid rounded" alt="About Omkar Enterprises">
+      </div>
+      <div class="col-md-6">
+        <h2>Who We Are</h2>
+        <p>Omkar Enterprises was founded with the vision to provide sustainable financial growth opportunities while adhering strictly to compliance and MOA-approved objectives.</p>
+        <p>We focus on building long-term investor trust through disciplined strategies, transparency in operations, and timely delivery of commitments.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission, Vision, Values -->
+  <section class="container my-5">
+    <div class="row text-center">
+      <div class="col-md-4">
+        <div class="section-card">
+          <h4>Our Mission</h4>
+          <p>To create lasting value for our investors by following risk-controlled, compliant investment practices.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="section-card">
+          <h4>Our Vision</h4>
+          <p>To become a recognized and trusted financial partner, scaling responsibly while maintaining transparency.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="section-card">
+          <h4>Our Values</h4>
+          <p>Integrity, Compliance, Transparency, Sustainability, and Investor-Centric Growth.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center">
+    <p>TRFSK Omkar Services Pvt Ltd | Compliant with MOA & Companies Act, 2013</p>
+    <p>&copy; 2025 Omkar Enterprises | 
+      <a href="#">Instagram</a> | 
+      <a href="#">Facebook</a> | 
+      <a href="#">LinkedIn</a> | 
+      <a href="#">Twitter</a> | 
+      <a href="#">YouTube</a>
+    </p>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
