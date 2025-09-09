@@ -5,49 +5,71 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Investor Relations | Omkar Enterprises</title>
 <meta name="description" content="Investor Relations page of Omkar Enterprises - MOA-compliant, transparent, and secure investment information.">
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+
+<!-- Chart.js -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+body {font-family:'Roboto', sans-serif; background:#f8f9fa; color:#333;}
+h1,h2,h3 {font-family:'Montserrat', sans-serif; color:#002147;}
+.hero {background:linear-gradient(90deg,#e6f0ff,#cce0ff); color:#002147; padding:80px 0;}
+.hero .btn {margin:5px;}
+.section-card {box-shadow:0 4px 12px rgba(0,0,0,0.1); border-radius:10px; padding:20px; background:#fff; margin-bottom:30px;}
+.chart-container {padding:20px; background:#fff; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.1);}
+.disclaimer {font-size:0.85rem; color:#555; margin-top:10px;}
+footer {background:#002147; color:#fff; padding:20px 0;}
+</style>
 </head>
 <body>
 
 <!-- Navbar -->
-<header>
-  <nav class="navbar">
-    <div class="logo">Omkar Enterprises</div>
-    <ul class="nav-links">
-      <li><a href="#" class="active">Investor Relations</a></li>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About Us</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">Compliance</a></li>
-      <li><a href="#">Blog</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">Omkar Enterprises</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="#">Investor Relations</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Compliance</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
 <!-- Hero Section -->
-<section class="hero">
-  <div class="hero-content">
+<section class="hero text-center">
+  <div class="container">
     <h1>Investor Relations</h1>
     <p>Transparency, compliance, and disciplined growth for our investors.</p>
-    <div class="hero-cta">
-      <a href="#portal" class="btn">Investor Portal Login</a>
-      <a href="#contact" class="btn btn-secondary">Contact Us</a>
-    </div>
+    <a href="#portal" class="btn btn-primary btn-lg">Investor Portal Login</a>
+    <a href="#contact" class="btn btn-secondary btn-lg">Contact Us</a>
     <p class="disclaimer">All activities are conducted within the objects of the company’s MOA and the Companies Act, 2013. Past performance is not indicative of future returns.</p>
   </div>
 </section>
 
-<!-- Aggregate Performance Section -->
-<section class="performance">
-  <h2>Aggregate Past Performance</h2>
-  <p>Anonymized aggregated data of investor returns over the last 3 years.</p>
-  <div class="chart-card">
+<!-- Aggregate Performance -->
+<section class="container my-5">
+  <div class="text-center mb-4">
+    <h2>Aggregate Past Performance</h2>
+    <p>Anonymized aggregated data of investor returns over the last 3 years.</p>
+  </div>
+  <div class="chart-container">
     <canvas id="performanceChart"></canvas>
   </div>
-  <p class="chart-disclaimer">Data is aggregated and anonymized. Past performance is not a guarantee of future returns.</p>
+  <p class="text-center disclaimer">Data is aggregated and anonymized. Past performance is not a guarantee of future returns.</p>
 </section>
 
 <script>
@@ -58,105 +80,136 @@ const performanceChart = new Chart(ctx, {
         labels: ['2023', '2024', '2025 (YTD)'],
         datasets: [{
             label: 'Average Annualized Return (%)',
-            data: [12, 14, 13.5],
-            backgroundColor: 'rgba(0, 123, 255, 0.7)',
-            borderColor: 'rgba(0, 123, 255, 1)',
-            borderWidth: 1,
-            borderRadius: 5
+            data: [12,14,13.5],
+            backgroundColor: 'rgba(0,123,255,0.7)',
+            borderColor: 'rgba(0,123,255,1)',
+            borderWidth:1,
+            borderRadius:5
         }]
     },
     options: {
-        responsive: true,
-        plugins: {
-            tooltip: {enabled: true}
-        },
-        scales: {
-            y: {beginAtZero:true, max:20}
-        }
+        responsive:true,
+        plugins:{tooltip:{enabled:true}},
+        scales:{y:{beginAtZero:true,max:20}}
     }
 });
 </script>
 
-<!-- Private Portal Section -->
-<section id="portal" class="portal">
-  <h2>Private Investor Portal</h2>
-  <p>Access secure, MOA-compliant investor resources:</p>
-  <div class="portal-cards">
-    <div class="card">
-      <h3>Reports</h3>
-      <p>Personalized quarterly & annual performance statements.</p>
+<!-- Private Portal -->
+<section class="container my-5" id="portal">
+  <div class="text-center mb-4"><h2>Private Investor Portal</h2></div>
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+      <div class="section-card text-center">
+        <h4>Reports</h4>
+        <p>Personalized quarterly & annual performance statements.</p>
+      </div>
     </div>
-    <div class="card">
-      <h3>Compliance</h3>
-      <p>TDS certificates and MOA-aligned investment documents.</p>
+    <div class="col">
+      <div class="section-card text-center">
+        <h4>Compliance</h4>
+        <p>TDS certificates and MOA-aligned investment documents.</p>
+      </div>
     </div>
-    <div class="card">
-      <h3>Milestones</h3>
-      <p>Historical investment achievements and portfolio summary.</p>
+    <div class="col">
+      <div class="section-card text-center">
+        <h4>Milestones</h4>
+        <p>Historical investment achievements and portfolio summary.</p>
+      </div>
     </div>
   </div>
-  <a href="#" class="btn">Login to Investor Portal</a>
-  <p class="disclaimer">Restricted to verified investors only. Sharing of login credentials is strictly prohibited.</p>
+  <div class="text-center mt-3">
+    <a href="#" class="btn btn-primary">Login to Investor Portal</a>
+    <p class="disclaimer">Restricted to verified investors only. Sharing of login credentials is strictly prohibited.</p>
+  </div>
 </section>
 
-<!-- Risk Disclaimer Section -->
-<section class="risk">
-  <h2>Risk Disclaimer</h2>
-  <p>Investments involve risk. Past performance is not indicative of future returns. All investment decisions are made according to MOA-approved objects and internal risk policies.</p>
+<!-- Risk Disclaimer -->
+<section class="container my-5">
+  <div class="section-card">
+    <h2>Risk Disclaimer</h2>
+    <p>Investments involve risk. Past performance is not indicative of future returns. All investment decisions are made according to MOA-approved objects and internal risk policies.</p>
+  </div>
 </section>
 
-<!-- Downloadable Resources Section -->
-<section class="resources">
-  <h2>Downloadable Resources</h2>
-  <ul>
-    <li>Quarterly Reports (Aggregate)</li>
-    <li>Company MOA Summary</li>
-    <li>Investment Policy Document</li>
-  </ul>
-  <p>Available for verified investors via portal login.</p>
+<!-- Downloadable Resources -->
+<section class="container my-5">
+  <div class="section-card">
+    <h2>Downloadable Resources</h2>
+    <ul>
+      <li>Quarterly Reports (Aggregate)</li>
+      <li>Company MOA Summary</li>
+      <li>Investment Policy Document</li>
+    </ul>
+    <p>Available for verified investors via portal login.</p>
+  </div>
 </section>
 
 <!-- FAQ Section -->
-<section class="faq">
-  <h2>Frequently Asked Questions</h2>
-  <div class="faq-card">
-    <h3>How are returns calculated?</h3>
-    <p>Returns are based on structured investment policies and risk-adjusted strategies.</p>
+<section class="container my-5">
+  <div class="text-center mb-4"><h2>Frequently Asked Questions</h2></div>
+  <div class="accordion" id="faqAccordion">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="faq1">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">How are returns calculated?</button>
+      </h2>
+      <div id="collapse1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">Returns are based on structured investment policies and risk-adjusted strategies.</div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="faq2">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">Can I withdraw early?</button>
+      </h2>
+      <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">Withdrawal terms are defined in the investment agreement. Contact Investor Relations for guidance.</div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="faq3">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">How is my investment protected?</button>
+      </h2>
+      <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">Investments are managed under MOA-approved objects, full compliance, and internal risk management policies.</div>
+      </div>
+    </div>
   </div>
-  <div class="faq-card">
-    <h3>Can I withdraw early?</h3>
-    <p>Withdrawal terms are defined in the investment agreement. Contact Investor Relations for guidance.</p>
-  </div>
-  <div class="faq-card">
-    <h3>How is my investment protected?</h3>
-    <p>Investments are managed under MOA-approved objects, full compliance, and internal risk management policies.</p>
-  </div>
-</section>
-
-<!-- Growth Timeline Section -->
-<section class="timeline">
-  <h2>Company Growth Timeline</h2>
-  <p>Foundation → Expansion → Institutional Scaling → Large Scale</p>
 </section>
 
 <!-- Contact Section -->
-<section id="contact" class="contact">
-  <h2>Contact Investor Relations</h2>
-  <form action="https://formspree.io/f/{your-id}" method="POST" class="contact-form">
-    <label>Name: <input type="text" name="name" required></label>
-    <label>Email: <input type="email" name="email" required></label>
-    <label>Phone: <input type="tel" name="phone"></label>
-    <label>Message: <textarea name="message" required></textarea></label>
-    <button type="submit">Submit</button>
-  </form>
-  <p class="disclaimer">Responses are provided in accordance with legal and MOA-compliant guidelines. Past returns are informational only.</p>
+<section class="container my-5" id="contact">
+  <div class="text-center mb-4"><h2>Contact Investor Relations</h2></div>
+  <div class="section-card">
+    <form action="https://formspree.io/f/{your-id}" method="POST">
+      <div class="mb-3">
+        <label class="form-label">Name</label>
+        <input class="form-control" type="text" name="name" required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input class="form-control" type="email" name="email" required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Phone</label>
+        <input class="form-control" type="tel" name="phone">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Message</label>
+        <textarea class="form-control" name="message" rows="4" required></textarea>
+      </div>
+      <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+    <p class="disclaimer mt-3">Responses are provided in accordance with legal and MOA-compliant guidelines. Past returns are informational only.</p>
+  </div>
 </section>
 
 <!-- Footer -->
-<footer>
+<footer class="text-center">
   <p>TRFSK Omkar Services Pvt Ltd | All activities conducted in compliance with MOA & Companies Act, 2013</p>
   <p>&copy; 2025 Omkar Enterprises | <a href="#">LinkedIn</a> | <a href="#">YouTube</a> | <a href="#">WhatsApp</a></p>
 </footer>
 
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
