@@ -3,29 +3,133 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Omkar Enterprises</title>
+  <title>Compliance | Omkar Enterprises</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/script.js" defer></script>
 </head>
 <body>
-  <header>
-    <img src="images/logo.png" alt="Omkar Enterprises Logo" width="150">
-    <nav>
-      <a href="index.html">Home</a> |
-      <a href="about.html">About</a> |
-      <a href="services.html">Services</a> |
-      <a href="investors.html">Investors</a> |
-      <a href="compliance.html">Compliance</a> |
-      <a href="blog.html">Blog</a> |
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
-  <main>
-    <h1>Welcome to Omkar Enterprises</h1>
-    <p>This is a placeholder for the Compliance page.</p>
-  </main>
-  <footer>
-    <p>&copy; 2025 Omkar Enterprises</p>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/logo.png" alt="Logo" width="40" class="me-2"> Omkar Enterprises
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="investors.html">Investor Relations</a></li>
+          <li class="nav-item"><a class="nav-link active" href="compliance.html">Compliance</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero text-center">
+    <div class="container">
+      <h1>Compliance & Legal Framework</h1>
+      <p>Ensuring transparency, accountability, and adherence to all applicable laws & MOA objects.</p>
+    </div>
+  </section>
+
+  <!-- Legal Framework -->
+  <section class="container my-5">
+    <h2 class="mb-4">Our Legal Framework</h2>
+    <div class="section-card">
+      <p>
+        Omkar Enterprises operates in strict compliance with the 
+        <strong>Companies Act, 2013</strong>, and all transactions are aligned with the 
+        <strong>Memorandum of Association (MOA)</strong> of TRFSK Omkar Services Pvt Ltd. 
+      </p>
+      <ul>
+        <li>All investor agreements are executed on valid stamp paper.</li>
+        <li>KYC norms are strictly followed for every investor.</li>
+        <li>TDS and tax obligations are duly complied with.</li>
+        <li>All business activities are limited to MOA-approved objects.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Risk & Disclaimer -->
+  <section class="container my-5">
+    <h2 class="mb-4">Risk Disclosures & Disclaimers</h2>
+    <div class="section-card">
+      <p><strong>Important:</strong> All investments carry inherent risk. Past performance should not be considered a guarantee of future returns.</p>
+      <ul>
+        <li>Omkar Enterprises does not promise fixed guaranteed returns unless specifically documented in agreements.</li>
+        <li>All investment activities are subject to business, market, and regulatory risks.</li>
+        <li>Investors are advised to read agreements carefully before investing.</li>
+        <li>Any early withdrawals may be subject to terms and conditions.</li>
+        <li>We comply with all MOA restrictions; no business is done outside our approved scope.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Compliance Policies -->
+  <section class="container my-5">
+    <h2 class="mb-4">Compliance Policies</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="section-card">
+          <h4>AML & KYC Policy</h4>
+          <p>All investors must submit identity & address proofs to comply with Anti-Money Laundering guidelines.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="section-card">
+          <h4>Tax Compliance</h4>
+          <p>We deduct and deposit applicable TDS, and issue Form 16A or other certificates to all investors.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="section-card">
+          <h4>Audit & Reporting</h4>
+          <p>Annual accounts are audited, and investor statements are prepared quarterly/annually.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="section-card">
+          <h4>Dispute Resolution</h4>
+          <p>All disputes are subject to arbitration and Indian jurisdiction as per agreement terms.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Downloadable Resources -->
+  <section class="container my-5">
+    <h2 class="mb-4">Downloadable Compliance Documents</h2>
+    <div class="section-card">
+      <ul>
+        <li><a href="#">MOA & AOA Summary (PDF)</a></li>
+        <li><a href="#">Investor Agreement Template (Sample)</a></li>
+        <li><a href="#">Compliance Checklist</a></li>
+        <li><a href="#">TDS Policy & FAQs</a></li>
+      </ul>
+      <p class="text-muted">*Access restricted to verified investors via private portal login.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center">
+    <p>TRFSK Omkar Services Pvt Ltd | Fully compliant with Companies Act, 2013 & MOA</p>
+    <p>&copy; 2025 Omkar Enterprises | 
+      <a href="#">Instagram</a> | 
+      <a href="#">Facebook</a> | 
+      <a href="#">LinkedIn</a> | 
+      <a href="#">Twitter</a> | 
+      <a href="#">YouTube</a>
+    </p>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
