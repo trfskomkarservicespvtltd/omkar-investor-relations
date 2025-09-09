@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="120">
+  <rect width="400" height="120" fill="white"/>
+  <g transform="translate(20,20)">
+    <circle cx="40" cy="40" r="36" fill="#002147"/>
+    <polygon points="40,12 66,48 40,40 14,48" fill="#1E90FF"/>
+  </g>
+  <text x="110" y="72" font-family="Montserrat,Roboto,Arial" font-size="34" fill="#002147">Omkar Enterprises</text>
+</svg>
