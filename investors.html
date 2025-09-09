@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Investor Relations - Omkar Enterprises</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Omkar Enterprises</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link active" href="investors.html">Investor Relations</a></li>
+        <li class="nav-item"><a class="nav-link" href="compliance.html">Compliance</a></li>
+        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main class="container my-5">
+  <div class="hero text-center mb-4">
+    <h1>Investor Relations</h1>
+    <p class="lead">Transparency, compliance, and disciplined growth for our investors.</p>
+    <p class="disclaimer">All activities are conducted within the objects of the company’s MOA and the Companies Act, 2013. Past performance is not indicative of future returns.</p>
+  </div>
+
+  <section class="chart-container mb-4">
+    <h3>Aggregate Past Performance</h3>
+    <canvas id="performanceChart" style="max-height:350px;"></canvas>
+    <p class="disclaimer mt-2">Data is aggregated and anonymized. Past performance is not a guarantee of future returns.</p>
+  </section>
+
+  <script>
+  const ctx = document.getElementById('performanceChart').getContext('2d');
+  const performanceChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+          labels: ['2023','2024','2025 (YTD)'],
+          datasets: [{label:'Average Annualized Return (%)', data:[12,14,13.5], backgroundColor:'rgba(0,123,255,0.75)', borderColor:'rgba(0,123,255,1)', borderWidth:1, borderRadius:6}]
+      },
+      options: {responsive:true, plugins:{tooltip:{enabled:true}}, scales:{y:{beginAtZero:true,max:20}}}
+  });
+  </script>
+
+  <section class="section-card mb-4" id="portal">
+    <h3>Private Investor Portal</h3>
+    <p>Access secure, MOA-compliant investor resources. (Portal will be set up for verified investors.)</p>
+    <div class="row">
+      <div class="col-md-4 text-center"><h5>Reports</h5><p>Personalized quarterly & annual statements.</p></div>
+      <div class="col-md-4 text-center"><h5>Compliance</h5><p>TDS certificates & MOA docs.</p></div>
+      <div class="col-md-4 text-center"><h5>Milestones</h5><p>Historical achievements & summaries.</p></div>
+    </div>
+    <div class="text-center mt-3"><a class="btn btn-primary" href="#">Request Portal Access</a></div>
+    <p class="disclaimer mt-2">Restricted to verified investors only. Sharing credentials is prohibited.</p>
+  </section>
+
+  <section class="section-card mb-4">
+    <h3>Downloadable Resources (For Verified Investors)</h3>
+    <ul>
+      <li>Quarterly Reports (Aggregate)</li>
+      <li>Company MOA Summary</li>
+      <li>Investment Policy Document</li>
+    </ul>
+    <p>Resources will be available in the private portal.</p>
+  </section>
+
+  <section class="section-card mb-4">
+    <h3>FAQ</h3>
+    <div class="accordion" id="faqAcc">
+      <div class="accordion-item">
+        <h2 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">How are returns calculated?</button></h2>
+        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAcc"><div class="accordion-body">Returns are calculated based on structured investment policies and risk-adjusted strategies.</div></div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">Can I withdraw early?</button></h2>
+        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAcc"><div class="accordion-body">Withdrawal terms are defined in your investment agreement. Contact Investor Relations.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-card mb-4" id="contactForm">
+    <h3>Contact Investor Relations</h3>
+    <form action="https://formspree.io/f/{your-id}" method="POST">
+      <div class="mb-3"><label class="form-label">Name</label><input class="form-control" type="text" name="name" required></div>
+      <div class="mb-3"><label class="form-label">Email</label><input class="form-control" type="email" name="email" required></div>
+      <div class="mb-3"><label class="form-label">Phone</label><input class="form-control" type="tel" name="phone"></div>
+      <div class="mb-3"><label class="form-label">Message</label><textarea class="form-control" name="message" rows="4" required></textarea></div>
+      <button class="btn btn-primary" type="submit">Send</button>
+    </form>
+    <p class="disclaimer mt-3">Responses provided per MOA-compliant guidelines. Past returns are informational only.</p>
+  </section>
+
+</main>
+
+<footer class="text-center py-4" style="background:#002147;color:#fff;">
+  <div class="container">
+    <p class="mb-1">TRFSK Omkar Services Pvt Ltd | All activities conducted in compliance with MOA &amp; Companies Act, 2013</p>
+    <small>&copy; 2025 Omkar Enterprises</small>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
