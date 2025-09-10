@@ -26,52 +26,46 @@ p {
 
 /* Navbar */
 .navbar {
-  background-color: #7198f5 !important;  /* your preferred blue */
+  background-color: #002147 !important;  /* deep navy corporate */
 }
-
-.navbar-brand {
-  font-weight: bold;
-  font-size: 1.25rem;
-  letter-spacing: 1px;
-}
-
 
 .navbar .nav-link {
-  color: #fff !important;   /* make links visible in white */
+  color: #fff !important;   /* white links */
 }
-
 
 .navbar .nav-link:hover {
-  color: #ffeb3b !important; /* yellowish hover */
+  color: #ffeb3b !important; /* subtle gold highlight */
 }
 
+.navbar-brand span {
+  color: #fff !important;  /* brand name in white */
+}
 
-/* Hero Section */
+/* Hero */
 .hero {
-  background: linear-gradient(90deg, #e6f0ff, #cce0ff);
-  padding: 80px 0;
-  text-align: center;
+  background: linear-gradient(90deg, #002147, #004aad);
+  color: #fff;
+}
+.hero h1, .hero p {
+  color: #fff;
 }
 
-.hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-
-.hero p {
-  font-size: 1.1rem;
-  margin-bottom: 20px;
-}
-
-
-/* Hero buttons */
+/* Buttons */
 .btn-primary {
-  background-color: #7198f5;
-  border-color: #7198f5;
+  background-color: #002147;
+  border-color: #002147;
 }
 .btn-primary:hover {
-  background-color: #4a77e0;
-  border-color: #4a77e0;
+  background-color: #004aad;
+  border-color: #004aad;
+}
+.btn-outline-light {
+  color: #fff;
+  border-color: #fff;
+}
+.btn-outline-light:hover {
+  background-color: #fff;
+  color: #002147;
 }
    
 /* Section Cards */
