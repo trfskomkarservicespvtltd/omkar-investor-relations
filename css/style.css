@@ -26,7 +26,7 @@ p {
 
 /* Navbar */
 .navbar {
-  background-color:#0261cf !important;
+  background-color: #7198f5 !important;  /* your preferred blue */
 }
 
 .navbar-brand {
@@ -35,14 +35,16 @@ p {
   letter-spacing: 1px;
 }
 
-/* Navbar link styling */
+
 .navbar .nav-link {
-  color: #026be3 !important;
-  font-weight: 500;
+  color: #fff !important;   /* make links visible in white */
 }
+
+
 .navbar .nav-link:hover {
-  color: #fff !important;
+  color: #ffeb3b !important; /* yellowish hover */
 }
+
 
 /* Hero Section */
 .hero {
