@@ -9,34 +9,116 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-   <!-- Navbar -->
-<!-- NAV - paste into top of each page (replace old nav) -->
-<nav class="navbar navbar-expand-lg navbar-dark brand-navbar">
-  <div class="container">
-    <a class="navbar-brand d-flex align-items-center" href="index.html">
-      <img src="images/logo.png" alt="Omkar Enterprises" class="brand-logo me-2">
-      <span class="brand-name">Omkar Enterprises</span>
-    </a>
-
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto align-items-lg-center">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-        <li class="nav-item"><a class="nav-link" href="compliance.html">Compliance</a></li>
-        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-        <li class="nav-item ms-lg-3">
-          <a class="btn btn-outline-light btn-cta" href="contact.html">Contact Us</a>
-        </li>
-      </ul>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/logo.png" alt="Logo" width="40" class="me-2"> Omkar Enterprises
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="investors.html">Investor Relations</a></li>
+          <li class="nav-item"><a class="nav-link" href="compliance.html">Compliance</a></li>
+          <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
   <!-- Hero -->
-  <section class="hero text-cent
+  <section class="hero text-center">
+    <div class="container">
+      <h1>Blog & Updates</h1>
+      <p>Stay updated with our latest news, compliance notices, and thought leadership.</p>
+    </div>
+  </section>
+
+  <!-- Blog Posts -->
+  <section class="container my-5">
+    <div class="row g-4">
+      <!-- Blog Post 1 -->
+      <div class="col-md-6">
+        <div class="section-card h-100">
+          <h4>Quarterly Compliance Update – Q2 2025</h4>
+          <p class="text-muted">Published: Aug 15, 2025</p>
+          <p>
+            We have successfully completed our Q2 audit and issued TDS certificates to all eligible investors. 
+            This demonstrates our commitment to transparency and accountability.
+          </p>
+          <a href="#" class="btn btn-sm btn-outline-primary">Read More</a>
+        </div>
+      </div>
+      <!-- Blog Post 2 -->
+      <div class="col-md-6">
+        <div class="section-card h-100">
+          <h4>Investor Milestone – ₹10 Crore Managed Capital</h4>
+          <p class="text-muted">Published: Jul 1, 2025</p>
+          <p>
+            Omkar Enterprises has crossed ₹10 Cr in managed investor funds, reinvested into diversified 
+            opportunities with full MOA compliance.
+          </p>
+          <a href="#" class="btn btn-sm btn-outline-primary">Read More</a>
+        </div>
+      </div>
+      <!-- Blog Post 3 -->
+      <div class="col-md-6">
+        <div class="section-card h-100">
+          <h4>Regulatory Alert – RBI Updates for NBFC Applicants</h4>
+          <p class="text-muted">Published: Jun 10, 2025</p>
+          <p>
+            RBI has updated guidelines for NBFC licensing. We are aligning our internal processes 
+            to ensure readiness for future application.
+          </p>
+          <a href="#" class="btn btn-sm btn-outline-primary">Read More</a>
+        </div>
+      </div>
+      <!-- Blog Post 4 -->
+      <div class="col-md-6">
+        <div class="section-card h-100">
+          <h4>CSR Initiative – Community Skill Development</h4>
+          <p class="text-muted">Published: May 25, 2025</p>
+          <p>
+            Beyond investments, Omkar Enterprises has launched a CSR initiative to support 
+            local entrepreneurship and skill development.
+          </p>
+          <a href="#" class="btn btn-sm btn-outline-primary">Read More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Disclaimer -->
+  <section class="container my-5">
+    <div class="section-card">
+      <h2>Disclaimer</h2>
+      <p>
+        The information published in this blog is for informational purposes only. 
+        It does not constitute financial advice or an offer to the public. 
+        All investment-related activities are conducted within the scope of our MOA and 
+        subject to compliance with applicable laws.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center">
+    <p>TRFSK Omkar Services Pvt Ltd | Articles & Updates aligned with Companies Act, 2013</p>
+    <p>&copy; 2025 Omkar Enterprises | 
+      <a href="#">Instagram</a> | 
+      <a href="#">Facebook</a> | 
+      <a href="#">LinkedIn</a> | 
+      <a href="#">Twitter</a> | 
+      <a href="#">YouTube</a>
+    </p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
