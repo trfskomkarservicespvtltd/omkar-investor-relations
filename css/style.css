@@ -41,9 +41,10 @@ p {
   transition: color 0.3s ease;
 }
 
-.navbar-nav .nav-link:hover {
-  color: #ffc107 !important;
-}
+/* Navbar link hover */
+.navbar .nav-link:hover {
+  color: #002147 !important;
+  font-weight: 500;
 
 /* Hero Section */
 .hero {
@@ -62,12 +63,15 @@ p {
   margin-bottom: 20px;
 }
 
-.hero .btn {
-  margin: 5px;
-  border-radius: 30px;
-  padding: 10px 20px;
+/* Hero buttons */
+.btn-primary {
+  background-color: #7198f5;
+  border-color: #7198f5;
+.btn-primary:hover {
+  background-color: #4a77e0;
+  border-color: #4a77e0;
 }
-
+   
 /* Section Cards */
 .section-card {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -113,6 +117,11 @@ form .btn {
   padding: 10px 20px;
 }
 
+   /* Contact Us button hover */
+.navbar .btn-dark:hover {
+  background-color: #002147;
+  color: #fff;
+   
 /* Footer */
 footer {
   background: #002147;
