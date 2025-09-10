@@ -1,149 +1,135 @@
 /* =========================
-   Omkar Enterprises Website
-   Global Styles
+   Omkar Enterprises - Corporate Styles
+   Replace entire css/style.css with this.
    ========================= */
 
-/* Fonts */
-body {
-  font-family: 'Roboto', sans-serif;
-  background: #f8f9fa;
-  color: #333;
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
+:root{
+  --navy: #002147;        /* primary deep navy (corporate) */
+  --accent: #7198f5;      /* lighter accent */
+  --accent-2: #004aad;    /* darker accent for gradients */
+  --light-bg: #f8f9fa;
+  --muted: #6c757d;
 }
 
-h1, h2, h3, h4, h5 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  color: #002147;
-  margin-bottom: 1rem;
+*{box-sizing:border-box}
+body{
+  font-family: "Roboto", Arial, sans-serif;
+  background: var(--light-bg);
+  color: #222;
+  margin:0;
+  line-height:1.6;
 }
 
-p {
-  margin-bottom: 1rem;
+/* Typography */
+h1,h2,h3,h4 { font-family: "Montserrat", sans-serif; font-weight:700; color:var(--navy); margin-bottom: .75rem; }
+p { margin-bottom:.9rem; }
+
+/* ===== NAVBAR (brand-navbar) ===== */
+.brand-navbar{
+  background: linear-gradient(90deg, var(--navy) 0%, #003b7a 45%, var(--accent-2) 100%) !important;
+  padding: .45rem 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
 
-/* Navbar */
-.navbar {
-  background-color: #002147 !important;  /* deep navy corporate */
+.brand-navbar .container { display:flex; align-items:center; gap:1rem; }
+
+/* Logo & Brand */
+.brand-logo{ height:48px; width:auto; object-fit:contain; }
+.brand-name{ color:#fff; font-weight:700; font-size:1.15rem; letter-spacing:.4px; }
+
+/* Nav links */
+.brand-navbar .nav-link{
+  color: rgba(255,255,255,0.95) !important;
+  margin: 0 .35rem;
+  font-weight:500;
+  padding:.3rem .5rem;
+}
+.brand-navbar .nav-link:hover,
+.brand-navbar .nav-link:focus{
+  color: var(--accent) !important;
 }
 
-.navbar .nav-link {
-  color: #fff !important;   /* white links */
-}
-
-.navbar .nav-link:hover {
-  color: #ffeb3b !important; /* subtle gold highlight */
-}
-
-.navbar-brand span {
-  color: #fff !important;  /* brand name in white */
-}
-
-/* Hero */
-.hero {
-  background: linear-gradient(90deg, #002147, #004aad);
+/* CTA button in navbar */
+.brand-navbar .btn-cta{
+  border-radius:8px;
+  padding:.45rem .9rem;
+  background: transparent;
   color: #fff;
+  border: 1.5px solid rgba(255,255,255,0.85);
+  transition: all .18s ease;
+  font-weight:600;
 }
-.hero h1, .hero p {
+.brand-navbar .btn-cta:hover{
+  background:#fff;
+  color:var(--navy);
+  border-color:#fff;
+  transform:translateY(-1px);
+}
+
+/* Toggler icon (mobile) */
+.brand-navbar .navbar-toggler {
+  border-color: rgba(255,255,255,0.12);
+}
+.brand-navbar .navbar-toggler-icon{
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,0.95)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* ===== HERO ===== */
+.hero{
+  background: linear-gradient(90deg, rgba(0,33,71,1) 0%, rgba(0,68,145,1) 100%);
+  color:#fff;
+  padding:80px 0 60px;
+  text-align:center;
+}
+.hero h1{ font-size:2.6rem; color:#fff; margin-bottom:12px; }
+.hero p{ color: rgba(255,255,255,0.9); max-width:900px; margin:0 auto 18px; }
+
+/* Hero buttons */
+.btn-primary{
+  background: var(--navy);
+  border-color: var(--navy);
   color: #fff;
-}
-
-/* Buttons */
-.btn-primary {
-  background-color: #002147;
-  border-color: #002147;
-}
-.btn-primary:hover {
-  background-color: #004aad;
-  border-color: #004aad;
-}
-.btn-outline-light {
-  color: #fff;
-  border-color: #fff;
-}
-.btn-outline-light:hover {
-  background-color: #fff;
-  color: #002147;
-}
-   
-/* Section Cards */
-.section-card {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  padding: 25px;
-  background: #fff;
-  margin-bottom: 30px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.section-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-}
-
-/* Charts */
-.chart-container {
-  padding: 20px;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-/* FAQ Accordion */
-.accordion-button {
-  font-weight: 500;
-  color: #002147;
-}
-
-.accordion-button:not(.collapsed) {
-  background-color: #e6f0ff;
-  color: #002147;
-}
-
-/* Contact Form */
-form .form-control {
-  border-radius: 8px;
-  padding: 10px;
-}
-
-form .btn {
-  border-radius: 8px;
+  border-radius:30px;
   padding: 10px 20px;
 }
-
-/* Contact Us button */
-.navbar .btn-dark {
-  background-color: #002147;
-  border: none;
+.btn-primary:hover{ background: var(--accent-2); border-color: var(--accent-2); color:#fff; }
+.btn-outline-light{
+  color:#fff;
+  border-color: rgba(255,255,255,0.6);
+  border-radius:30px;
+  padding: 10px 20px;
 }
+.btn-outline-light:hover{ background:#fff; color:var(--navy); }
 
-   /* Contact Us button hover */
-.navbar .btn-dark:hover {
-  background-color: #002147;
+/* ===== SECTION CARDS ===== */
+.section-card{
+  background:#fff; border-radius:12px; padding:26px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.section-card:hover{ transform: translateY(-6px); box-shadow:0 14px 34px rgba(0,0,0,0.08); }
+
+/* ===== FAQ / accordion ===== */
+.accordion-button{ font-weight:600; color:var(--navy); }
+
+/* ===== Footer (preserve dark footer feel) ===== */
+footer{
+  background: var(--navy);
   color: #fff;
-   
-/* Footer */
-footer {
-  background: #002147;
-  color: #fff;
-  padding: 20px 0;
-  text-align: center;
+  padding: 26px 0;
+  text-align:center;
 }
+footer a{ color: #ffd966; margin: 0 8px; text-decoration:none; }
+footer a:hover{ color: #fff; }
 
-footer a {
-  color: #ffc107;
-  margin: 0 10px;
-  text-decoration: none;
-}
+/* Helper */
+.container-small{ max-width:1100px; margin:0 auto; padding:0 16px; }
+.disclaimer{ color:#e9eefc; font-size:0.9rem; margin-top:8px; }
 
-footer a:hover {
-  color: #fff;
-}
-
-.disclaimer {
-  font-size: 0.85rem;
-  color: #555;
-  margin-top: 10px;
+/* Responsive tweaks */
+@media (max-width: 767px){
+  .hero h1{ font-size:1.9rem; }
+  .brand-logo{ height:40px; }
+  .brand-name{ font-size:1rem; }
+  .section-card{ padding:18px; }
 }
